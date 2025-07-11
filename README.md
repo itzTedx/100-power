@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ⚡ 100 Power
 
-## Getting Started
+**100 Power** is the rebranded identity of _Tirrent Global LLC_, reflecting our commitment to industrial innovation, sustainability, and high-performance lubrication technologies. We engineer military-grade, anti-friction solutions that reduce equipment wear, extend machinery life, and lower operational costs across high-stress industries.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🧬 What We Do
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Deliver next-generation **lubrication technologies**
+- Reduce **friction**, **noise**, and **oxidation**
+- Extend service life of engines and machinery
+- Support **cleaner oil flow** and minimize carbon build-up
+- Help reduce emissions and environmental impact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🚀 Core Technologies
 
-## Learn More
+### 🧪 Micro Metallurgical Process
 
-To learn more about Next.js, take a look at the following resources:
+Transforms friction surfaces into ultra-hard, ultra-smooth layers — improving oil flow, removing carbon deposits, and nearly eliminating metal wear.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🛡️ Anti-Friction Technology (AFT)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Creates a durable micro-layer that reduces metal-to-metal contact, protects against corrosion, and ensures quieter, cooler machinery performance.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🏗️ Industries We Serve
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Automotive
+- Industrial
+- Construction
+- Mining
+- Oil & Gas
+- Marine
+- Agriculture
+- Military
+- Railways
+
+---
+
+## 🌟 Project Features
+
+- **Modern UI**: Built with atomic, reusable components (ShadCN UI, Radix UI)
+- **Responsive Design**: Mobile-first, desktop-optimized layouts
+- **Dark Mode & RTL**: Fully supported for accessibility and global reach
+- **Custom Fonts**: Integrated with local and Google fonts for unique branding
+- **Iconography**: Lucide React & Tabler Icons for a consistent visual language
+- **TypeScript**: End-to-end type safety
+- **Strict Linting & Formatting**: ESLint, Prettier, and Tailwind plugins
+- **Fast Deployments**: Vercel & AWS (via Turbopack)
+- **Documentation**: `.mdx` files for easy, consistent docs
+
+---
+
+## 🖥️ Tech Stack
+
+We use a modern, scalable stack to power the 100 Power web experience:
+
+| Layer           | Stack/Tool                                |
+| --------------- | ----------------------------------------- |
+| **Frontend**    | Next.js 15 (App Router)                   |
+| **Styling**     | Tailwind CSS v4 + Custom CSS              |
+| **UI Library**  | ShadCN UI (atomic components), Radix UI   |
+| **Icons**       | Lucide React, Tabler Icons React          |
+| **TypeScript**  | TypeScript                                |
+| **Animation**   | tw-animate-css (utility classes)          |
+| **Lint/Format** | ESLint, Prettier, Tailwind/Import plugins |
+| **Deployment**  | Vercel / AWS (via Turbopack)              |
+
+---
+
+## 📁 Repository Guidelines
+
+- All code is structured under a **monorepo using Turborepo**
+- UI components are atomic and reusable via ShadCN setup
+- `.mdx` files are used for documentation consistency
+- Dark mode and RTL-ready layout supported
+- Continuous Deployment via Vercel or custom AWS pipelines
+
+---
+
+## 🤝 Contributing
+
+We welcome contributions! To get started:
+
+1. Fork this repository
+2. Create a new branch (`git checkout -b feature/your-feature`)
+3. Commit your changes (`git commit -m 'Add new feature'`)
+4. Push to your branch (`git push origin feature/your-feature`)
+5. Open a Pull Request
+
+Please follow our code style and add tests where appropriate.
+
+---
+
+## 📞 Contact
+
+For questions, partnership opportunities, or support:
+
+- Email: [info@100power.com](mailto:info@100power.com)
+- Website: [100power.com](https://100power.com)
+
+---
+
+**Website designed & coded by [Ziron Media](https://www.zironmedia.com)**
+
+---
+
+> 🧠 This README and associated `.mdx` files are intended for team documentation, contributors, and tech partners to understand the foundation of 100 Power’s digital presence.
