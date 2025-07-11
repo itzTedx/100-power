@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { IconArrowUpRight, IconPlayerPlay } from "@tabler/icons-react";
 
+import Dither from "@/components/background/dither";
 import { Industries } from "@/components/sections/home/industries";
 import { Button } from "@/components/ui/button";
 import {
@@ -56,8 +57,11 @@ export default function Home() {
           className="object-cover"
         />
       </header>
-      <main id="main-content" className="container">
-        <section className="py-8 sm:py-12" aria-labelledby="who-we-are-heading">
+      <main id="main-content">
+        <section
+          className="container py-8 sm:py-12"
+          aria-labelledby="who-we-are-heading"
+        >
           <Separator className="my-8 sm:my-12" />
           <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
             <h2
@@ -84,7 +88,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-8 sm:py-12" aria-labelledby="innovation-heading">
+        <section
+          className="container py-8 sm:py-12"
+          aria-labelledby="innovation-heading"
+        >
           <article className="relative flex aspect-video flex-col items-start justify-between gap-4 overflow-hidden rounded-sm bg-gray-200 p-4 sm:p-9">
             <button
               className="group hover:text-primary z-10 flex cursor-pointer items-center gap-2 self-end text-base font-semibold tracking-tight text-white italic transition-colors delay-75 sm:text-lg"
@@ -145,7 +152,7 @@ export default function Home() {
             </video>
           </article>
         </section>
-        <section className="py-12">
+        <section className="container py-12">
           <h2 className="mb-4 text-2xl">Flagship Products</h2>
           <div className="grid grid-cols-3 gap-5">
             {Array.from({ length: 5 }).map((_, i) => (
@@ -184,8 +191,22 @@ export default function Home() {
             ))}
           </div>
         </section>
-        <Separator className="my-12" />
+        <div className="container">
+          <Separator className="my-12" />
+        </div>
         <Industries />
+        <section>
+          <Dither
+            waveColor={[0.5, 0.5, 0.5]}
+            disableAnimation={false}
+            enableMouseInteraction={true}
+            mouseRadius={2}
+            colorNum={4}
+            waveAmplitude={0.3}
+            waveFrequency={2.5}
+            waveSpeed={0.05}
+          />
+        </section>
       </main>
     </div>
   );

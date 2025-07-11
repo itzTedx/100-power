@@ -37,7 +37,7 @@ export const Industries = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <section className="relative grid grid-cols-2 gap-5 py-12">
+    <section className="relative container grid grid-cols-2 gap-5 py-12">
       <div className="sticky top-[12vh] h-fit py-6">
         <h2 className="text-2xl">Industries We Serve</h2>
         <p className="text-5xl leading-snug tracking-tight">
@@ -45,11 +45,8 @@ export const Industries = () => {
           hurts most - and performance matters most.
         </p>
       </div>
-      <div className="sticky top-[12vh] aspect-5/4 h-[200vh] overflow-hidden rounded-sm">
-        <div
-          className="relative aspect-5/4"
-          style={{ height: `${industries.length * 60}vh` }}
-        >
+      <div className="sticky top-[12vh] aspect-5/4 h-[60vh] overflow-hidden rounded-sm">
+        <div className="relative aspect-5/4">
           {industries.map((industry, idx) => (
             <div
               key={idx}
