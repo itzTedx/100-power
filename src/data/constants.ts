@@ -24,7 +24,7 @@ export const NAV_LINKS = [
   {
     id: 3,
     title: "Solutions",
-    href: "/",
+    href: "/solutions",
   },
   {
     id: 4,
@@ -44,8 +44,8 @@ export const PRODUCTS = [
   {
     id: 2,
     title: "100 Power Booster",
-    label: "X-Power",
-    badge: "5W-30",
+    label: "Lubricant",
+    badge: "Advanced Nano Lubricant technology",
     href: "/",
   },
   {

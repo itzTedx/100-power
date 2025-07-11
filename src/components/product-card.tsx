@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 import { IconArrowUpRight } from "@tabler/icons-react";
 
@@ -28,7 +29,7 @@ export const ProductCard = ({ data }: Props) => {
       <CardHeader>
         <div className="flex items-center gap-2">
           <div className="bg-secondary size-2 rounded-full" />
-          <p className="font-aloevera font-medium italic">X Power</p>
+          <p className="font-aloevera font-medium italic">{data.label}</p>
         </div>
         <Button size="icon" variant="secondary">
           <IconArrowUpRight />
@@ -44,16 +45,16 @@ export const ProductCard = ({ data }: Props) => {
           />
         </div>
         <div className="absolute inset-0 z-10 flex items-end justify-center p-4 opacity-0 transition-opacity group-hover:opacity-100">
-          <Button className="z-10 mx-auto" variant="outline">
-            Discover it
+          <Button className="z-10 mx-auto" variant="outline" asChild>
+            <Link href={data.href}>Discover it</Link>
           </Button>
 
           <div className="from-card pointer-events-none absolute inset-0 translate-y-full bg-gradient-to-t to-transparent transition-transform group-hover:translate-y-0" />
         </div>
       </CardContent>
       <CardFooter>
-        <CardDescription>5W-30</CardDescription>
-        <CardTitle>X Power Motor Oil</CardTitle>
+        <CardDescription>{data.badge}</CardDescription>
+        <CardTitle>{data.title}</CardTitle>
       </CardFooter>
     </Card>
   );
