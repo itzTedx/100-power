@@ -9,16 +9,19 @@ import { Separator } from "@/components/ui/separator";
 export default function Home() {
   return (
     <div className="min-h-svh">
-      <header className="relative flex min-h-svh items-end" role="banner">
-        <div className="relative z-10 container py-20">
-          <div className="mb-6 grid grid-cols-3 gap-6">
-            <h1 className="col-span-2 text-7xl font-bold tracking-tighter italic">
+      <header
+        className="relative flex min-h-svh flex-col items-end justify-end md:flex-row"
+        role="banner"
+      >
+        <div className="relative z-10 container py-12 md:py-20">
+          <div className="mb-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <h1 className="col-span-1 text-4xl font-bold tracking-tighter italic sm:text-5xl md:col-span-2 md:text-7xl">
               Unleash 100% Performance with{" "}
               <span className="gold inline-block" data-heading="100 Power.">
                 100 Power.
               </span>
             </h1>
-            <p className="font-aloevera text-xl">
+            <p className="font-aloevera text-lg sm:text-xl">
               Next-gen lubrication technology to maximize performance, minimize
               friction, and protect the planet.
             </p>
@@ -33,7 +36,7 @@ export default function Home() {
           </Button>
         </div>
         <div
-          className="from-background absolute inset-x-0 z-1 h-2/3 bg-gradient-to-t to-transparent"
+          className="from-background absolute inset-x-0 bottom-0 z-1 h-2/3 bg-gradient-to-t to-transparent"
           aria-hidden="true"
         />
         <Image
@@ -45,14 +48,17 @@ export default function Home() {
         />
       </header>
       <main id="main-content" className="container">
-        <section className="py-12" aria-labelledby="who-we-are-heading">
-          <Separator className="my-12" />
-          <div className="grid grid-cols-3 gap-4">
-            <h2 id="who-we-are-heading" className="text-2xl font-medium">
+        <section className="py-8 sm:py-12" aria-labelledby="who-we-are-heading">
+          <Separator className="my-8 sm:my-12" />
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <h2
+              id="who-we-are-heading"
+              className="text-xl font-medium sm:text-2xl"
+            >
               Who we are
             </h2>
-            <div className="col-span-2 space-y-4">
-              <p className="text-5xl leading-snug tracking-tighter [&_span]:font-bold">
+            <div className="col-span-1 space-y-4 md:col-span-2">
+              <p className="text-2xl leading-snug tracking-tighter sm:text-4xl md:text-5xl [&_span]:font-bold">
                 100 Power is a UAE-based brand born from American innovation.
                 We&apos;ve redefined how lubrication works - Pushing boundaries
                 with{" "}
@@ -69,27 +75,27 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="py-12" aria-labelledby="innovation-heading">
-          <article className="relative flex aspect-video flex-col items-start justify-between overflow-hidden rounded-sm bg-gray-200 p-9">
+        <section className="py-8 sm:py-12" aria-labelledby="innovation-heading">
+          <article className="relative flex aspect-video flex-col items-start justify-between gap-4 overflow-hidden rounded-sm bg-gray-200 p-4 sm:p-9">
             <button
-              className="group hover:text-primary z-10 flex cursor-pointer items-center gap-2 self-end text-lg font-semibold tracking-tight text-white italic transition-colors delay-75"
+              className="group hover:text-primary z-10 flex cursor-pointer items-center gap-2 self-end text-base font-semibold tracking-tight text-white italic transition-colors delay-75 sm:text-lg"
               aria-label="Play brand video"
             >
-              <div className="bg-secondary text-secondary-foreground group-hover:bg-primary grid size-14 place-content-center rounded-full transition-colors duration-300">
-                <IconPlayerPlay className="size-6" />
+              <div className="bg-secondary text-secondary-foreground group-hover:bg-primary grid size-12 place-content-center rounded-full transition-colors duration-300 sm:size-14">
+                <IconPlayerPlay className="size-5 sm:size-6" />
               </div>
-              Play Brand Video
+              Play Video
             </button>
             <div className="relative z-10 space-y-4">
               <h2
                 id="innovation-heading"
-                className="text-6xl font-bold tracking-tighter italic"
+                className="text-3xl font-bold tracking-tighter italic sm:text-5xl md:text-6xl"
               >
                 Driven by Innovation.
                 <br />
                 Engineered for Impact.
               </h2>
-              <p className="max-w-prose text-lg tracking-tight text-balance">
+              <p className="max-w-prose text-base tracking-tight text-balance sm:text-lg">
                 Our advanced American-made anti-friction and lubrication
                 solutions are trusted across industries for maximizing equipment
                 life, lowering maintenance, and reducing emissions. At 100
@@ -105,14 +111,14 @@ export default function Home() {
               </Button>
             </div>
             <div
-              className="from-background absolute inset-x-0 bottom-0 z-1 h-2/3 bg-gradient-to-t to-transparent"
+              className="from-background absolute inset-x-0 bottom-0 z-1 h-1/3 bg-gradient-to-t to-transparent md:h-2/3"
               aria-hidden="true"
             />
             <video
               autoPlay
               loop
               muted
-              className="absolute inset-0"
+              className="absolute inset-0 h-full w-full object-cover"
               title="100 Power brand video"
               aria-label="100 Power brand video"
             >
