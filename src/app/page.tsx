@@ -4,6 +4,13 @@ import Link from "next/link";
 import { IconArrowUpRight, IconPlayerPlay } from "@tabler/icons-react";
 
 import { Button } from "@/components/ui/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 
 export default function Home() {
@@ -138,6 +145,13 @@ export default function Home() {
         </section>
         <section>
           <h2>Flagship Products</h2>
+          <Card>
+            <CardHeader></CardHeader>
+            <CardContent>
+              <CardDescription>5W-30</CardDescription>
+              <CardTitle>X Power Motor Oil</CardTitle>
+            </CardContent>
+          </Card>
         </section>
       </main>
     </div>
