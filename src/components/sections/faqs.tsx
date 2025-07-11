@@ -18,14 +18,14 @@ export const Faqs = () => {
         <div className="relative grid h-80 w-full place-content-center overflow-hidden rounded-sm">
           <div className="absolute inset-0">
             <Beams
-              beamWidth={4}
-              beamHeight={30}
-              beamNumber={12}
+              beamWidth={8}
+              beamHeight={100}
+              beamNumber={16}
               lightColor="#EFBF04"
               speed={2}
               noiseIntensity={1.75}
-              scale={0.25}
-              rotation={30}
+              scale={0.2}
+              rotation={40}
             />
           </div>
           <h2 className="text-secondary-foreground relative z-50 text-4xl font-medium">
