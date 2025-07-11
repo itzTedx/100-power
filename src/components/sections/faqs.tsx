@@ -1,6 +1,14 @@
 import { IconArrowUpRight } from "@tabler/icons-react";
 
+import { FAQS } from "@/data/faqs";
+
 import Beams from "../background/beams";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
 import { Button } from "../ui/button";
 
 export const Faqs = () => {
@@ -29,6 +37,57 @@ export const Faqs = () => {
         </Button>
 
         <h3 className="text-center text-3xl">Frequently Asked Questions</h3>
+        <div className="mt-6 grid w-full grid-cols-2 gap-6">
+          {(() => {
+            const half = Math.ceil(FAQS.length / 2);
+            const firstHalf = FAQS.slice(0, half);
+            const secondHalf = FAQS.slice(half);
+            return (
+              <>
+                <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full space-y-3"
+                >
+                  {firstHalf.map((item) => (
+                    <AccordionItem
+                      value={item.id.toFixed()}
+                      key={item.id}
+                      className="bg-secondary-foreground has-focus-visible:border-ring has-focus-visible:ring-ring/50 h-fit rounded-md px-4 py-1 outline-none last:border-b has-focus-visible:ring-[3px]"
+                    >
+                      <AccordionTrigger className="py-2 text-[15px] leading-6 hover:no-underline focus-visible:ring-0">
+                        {item.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pb-2">
+                        {item.content}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+                <Accordion
+                  type="single"
+                  collapsible
+                  className="w-full space-y-3"
+                >
+                  {secondHalf.map((item) => (
+                    <AccordionItem
+                      value={item.id.toFixed()}
+                      key={item.id}
+                      className="bg-secondary-foreground has-focus-visible:border-ring has-focus-visible:ring-ring/50 h-fit rounded-md px-4 py-1 outline-none last:border-b has-focus-visible:ring-[3px]"
+                    >
+                      <AccordionTrigger className="py-2 text-[15px] leading-6 hover:no-underline focus-visible:ring-0">
+                        {item.title}
+                      </AccordionTrigger>
+                      <AccordionContent className="text-muted-foreground pb-2">
+                        {item.content}
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </>
+            );
+          })()}
+        </div>
       </div>
     </section>
   );
