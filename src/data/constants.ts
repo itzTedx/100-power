@@ -129,3 +129,36 @@ export const SOCIALS = [
     href: "/",
   },
 ];
+
+export const TECHNOLOGIES = [
+  {
+    id: 1,
+    title: "Micro Metallurgical Process",
+    subtext: "Stronger. Smoother. Smarter Metal.",
+    lists: [
+      "Eliminates friction",
+      "Polishes internal surfaces",
+      "Prevents sludge and build-up",
+      "Increases durability under stress",
+    ],
+    description:
+      "Our proprietary micro-metallurgical process transforms metal friction surfaces into ultra-hard, ultra-smooth layers — eliminating wear and extending surface life. It polishes and cleans internals, ensuring cleaner oil flow, fewer deposits, and improved efficiency.",
+
+    image: "/images/micro-process.webp",
+  },
+  {
+    id: 2,
+    title: "Anti-Friction Technology (AFT)",
+    subtext: "SFriction-Resistant by Design.",
+    lists: [
+      "Reduces metal-to-metal contact",
+      "Minimizes noise and vibration",
+      "Resists abrasion and oxidation",
+      "Optimizes reliability and uptime",
+    ],
+    description:
+      "Our cutting-edge AFT technology forms a protective micro-layer between metal parts — reducing contact, preventing wear, and cutting down vibration noise. It resists corrosion and oxidation, ensuring longer equipment life and quieter, smoother performance.",
+
+    image: "/images/anti-friction.webp",
+  },
+];
