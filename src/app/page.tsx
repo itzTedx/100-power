@@ -136,6 +136,9 @@ export default function Home() {
             </video>
           </article>
         </section>
+        <section>
+          <h2>Flagship Products</h2>
+        </section>
       </main>
     </div>
   );
