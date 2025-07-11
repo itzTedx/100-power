@@ -162,3 +162,57 @@ export const TECHNOLOGIES = [
     image: "/images/anti-friction.webp",
   },
 ];
+
+export const COUNTRIES = [
+  { country: "USA", desc: "Headquarters & Manufacturing" },
+  { country: "India", desc: "Regional Office" },
+  { country: "UAE", desc: "Manufacturing & Office" },
+  { country: "Russia", desc: "Defense Sector" },
+  { country: "Australia", desc: "Defense Sector" },
+  { country: "Israel", desc: "Defense Sector" },
+  { country: "Serbia", desc: "Defense Sector" },
+];
+
+export const INDUSTRIES = [
+  { label: "Automotive", image: "/images/automotive.webp" },
+  { label: "Railways", image: "/images/automotive.webp" },
+  { label: "Mining", image: "/images/automotive.webp" },
+  { label: "Marine & Shipping", image: "/images/automotive.webp" },
+  { label: "Construction", image: "/images/automotive.webp" },
+  { label: "Agriculture", image: "/images/automotive.webp" },
+  { label: "Defense & Military", image: "/images/automotive.webp" },
+  { label: "Industrial Equipment", image: "/images/industrial.webp" },
+];
+
+export const MISSION =
+  "To continuously innovate through deep R&D, and engineer advanced lubrication technologies that drastically reduce wear, extend equipment lifespan, and reduce operational and environmental costs.";
+
+export const VISION =
+  "To be the most trusted provider of ultra-performance lubrication solutions—offering globally competitive quality and reliability through strong partnerships and local distribution.";
+
+export const GOALS = [
+  "Extend oil change intervals by up to 3×",
+  "Increase equipment life by up to 8×",
+  "Reduce fuel consumption by up to 20%",
+  "Decrease engine wear by up to 95%",
+  "Lower maintenance costs and minimize downtime",
+  "Contribute to cleaner, more sustainable operations",
+];
+
+export const RESPONSIBILITY = [
+  {
+    icon: "ShieldCheck",
+    title: "Quality",
+    desc: "We follow rigorous quality control to ensure every drop performs at the highest standard.",
+  },
+  {
+    icon: "Leaf",
+    title: "Sustainability",
+    desc: "We engineer solutions that help reduce emissions, oil waste, and carbon impact.",
+  },
+  {
+    icon: "Handshake",
+    title: "Integrity",
+    desc: "We operate transparently and ethically, building lasting relationships with customers and partners.",
+  },
+];
