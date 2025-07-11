@@ -109,3 +109,32 @@
     max-width: 120rem;
   }
 }
+
+.gold {
+  background: linear-gradient(
+    to bottom,
+    #fef7ab 17%,
+    #f0d278 40%,
+    #a16000 70%,
+    #3a2c0f 98%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #fff;
+  position: relative;
+  line-height: 1.3;
+}
+
+.gold::after {
+  background: none;
+  content: attr(data-heading) / "";
+  left: 0;
+  top: 0;
+  z-index: -1;
+  position: absolute;
+  text-shadow:
+    -1px 0 1px #c6bb9f,
+    0 1px 1px #c6bb9f,
+    5px 5px 10px rgba(0, 0, 0, 0.2),
+    -5px -5px 10px rgba(0, 0, 0, 0.2);
+}
