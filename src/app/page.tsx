@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { IconArrowUpRight, IconPlayerPlay } from "@tabler/icons-react";
 
+import { Industries } from "@/components/sections/home/industries";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -167,7 +168,7 @@ export default function Home() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="absolute inset-0 z-10 flex items-end justify-center opacity-0 transition-opacity group-hover:opacity-100">
+                  <div className="absolute inset-0 z-10 flex items-end justify-center p-4 opacity-0 transition-opacity group-hover:opacity-100">
                     <Button className="z-10 mx-auto" variant="outline">
                       Discover it
                     </Button>
@@ -183,6 +184,8 @@ export default function Home() {
             ))}
           </div>
         </section>
+        <Separator className="my-12" />
+        <Industries />
       </main>
     </div>
   );
