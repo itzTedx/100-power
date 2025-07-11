@@ -1,6 +1,6 @@
 "use client";
 
-import {
+import React, {
   FC,
   ReactNode,
   forwardRef,
@@ -90,10 +90,13 @@ function extendMaterial<T extends THREE.Material = THREE.Material>(
   return mat;
 }
 
-const CanvasWrapper: FC<{ children: ReactNode }> = ({ children }) => (
-  <Canvas dpr={[1, 2]} frameloop="always" className="relative h-full w-full">
-    {children}
-  </Canvas>
+// Memoize CanvasWrapper to avoid unnecessary re-renders
+const CanvasWrapper: FC<{ children: ReactNode }> = React.memo(
+  ({ children }) => (
+    <Canvas dpr={[1, 2]} frameloop="always" className="relative h-full w-full">
+      {children}
+    </Canvas>
+  )
 );
 
 const hexToNormalizedRGB = (hex: string): [number, number, number] => {
@@ -282,12 +285,13 @@ const Beams: FC<BeamsProps> = ({
   );
 };
 
+// Reduce default heightSegments for performance
 function createStackedPlanesBufferGeometry(
   n: number,
   width: number,
   height: number,
   spacing: number,
-  heightSegments: number
+  heightSegments: number = 50 // reduced from 100
 ): THREE.BufferGeometry {
   const geometry = new THREE.BufferGeometry();
   const numVertices = n * (heightSegments + 1) * 2;
@@ -339,29 +343,36 @@ function createStackedPlanesBufferGeometry(
   return geometry;
 }
 
-const MergedPlanes = forwardRef<
-  THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>,
-  {
-    material: THREE.ShaderMaterial;
-    width: number;
-    count: number;
-    height: number;
-  }
->(({ material, width, count, height }, ref) => {
-  const mesh = useRef<THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>>(
-    null!
-  );
-  useImperativeHandle(ref, () => mesh.current);
-  const geometry = useMemo(
-    () => createStackedPlanesBufferGeometry(count, width, height, 0, 100),
-    [count, width, height]
-  );
-  useFrame((_, delta) => {
-    mesh.current.material.uniforms.time.value += 0.1 * delta;
+// Memoize DirLight to avoid unnecessary re-renders
+const DirLight: FC<{ position: [number, number, number]; color: string }> =
+  React.memo(({ position, color }) => {
+    const dir = useRef<THREE.DirectionalLight>(null!);
+    useEffect(() => {
+      if (!dir.current) return;
+      const cam = dir.current.shadow.camera as THREE.Camera & {
+        top: number;
+        bottom: number;
+        left: number;
+        right: number;
+        far: number;
+      };
+      cam.top = 24;
+      cam.bottom = -24;
+      cam.left = -24;
+      cam.right = 24;
+      cam.far = 64;
+      dir.current.shadow.bias = -0.004;
+    }, []);
+    return (
+      <directionalLight
+        ref={dir}
+        color={color}
+        intensity={1}
+        position={position}
+      />
+    );
   });
-  return <mesh ref={mesh} geometry={geometry} material={material} />;
-});
-MergedPlanes.displayName = "MergedPlanes";
+DirLight.displayName = "DirLight";
 
 const PlaneNoise = forwardRef<
   THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>,
@@ -382,35 +393,32 @@ const PlaneNoise = forwardRef<
 ));
 PlaneNoise.displayName = "PlaneNoise";
 
-const DirLight: FC<{ position: [number, number, number]; color: string }> = ({
-  position,
-  color,
-}) => {
-  const dir = useRef<THREE.DirectionalLight>(null!);
-  useEffect(() => {
-    if (!dir.current) return;
-    const cam = dir.current.shadow.camera as THREE.Camera & {
-      top: number;
-      bottom: number;
-      left: number;
-      right: number;
-      far: number;
-    };
-    cam.top = 24;
-    cam.bottom = -24;
-    cam.left = -24;
-    cam.right = 24;
-    cam.far = 64;
-    dir.current.shadow.bias = -0.004;
-  }, []);
-  return (
-    <directionalLight
-      ref={dir}
-      color={color}
-      intensity={1}
-      position={position}
-    />
+const MergedPlanes = forwardRef<
+  THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>,
+  {
+    material: THREE.ShaderMaterial;
+    width: number;
+    count: number;
+    height: number;
+  }
+>(({ material, width, count, height }, ref) => {
+  const mesh = useRef<THREE.Mesh<THREE.BufferGeometry, THREE.ShaderMaterial>>(
+    null!
   );
-};
+  useImperativeHandle(ref, () => mesh.current);
+  // Memoize geometry, only recreate if count/width/height changes
+  const geometry = useMemo(
+    () => createStackedPlanesBufferGeometry(count, width, height, 0, 50),
+    [count, width, height]
+  );
+  // Use useFrame to update only the time uniform
+  useFrame((_, delta) => {
+    if (mesh.current && mesh.current.material.uniforms.time) {
+      mesh.current.material.uniforms.time.value += 0.1 * delta;
+    }
+  });
+  return <mesh ref={mesh} geometry={geometry} material={material} />;
+});
+MergedPlanes.displayName = "MergedPlanes";
 
-export default Beams;
+export default React.memo(Beams);
