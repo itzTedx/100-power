@@ -13,9 +13,9 @@ import { Button } from "../ui/button";
 
 export const Faqs = () => {
   return (
-    <section className="container py-12">
+    <section className="container py-8 md:py-12">
       <div className="flex flex-col items-center">
-        <div className="relative grid h-80 w-full place-content-center overflow-hidden rounded-sm">
+        <div className="relative grid h-52 w-full place-content-center overflow-hidden rounded-sm md:h-80">
           <div className="absolute inset-0">
             <Beams
               beamWidth={8}
@@ -37,7 +37,7 @@ export const Faqs = () => {
         </Button>
 
         <h3 className="text-center text-3xl">Frequently Asked Questions</h3>
-        <div className="mt-6 grid w-full gap-6 md:grid-cols-2">
+        <div className="mt-6 grid w-full gap-4 md:grid-cols-2 md:gap-6">
           {(() => {
             const half = Math.ceil(FAQS.length / 2);
             const firstHalf = FAQS.slice(0, half);

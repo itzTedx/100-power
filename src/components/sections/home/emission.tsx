@@ -2,9 +2,9 @@ import Dither from "@/components/background/dither";
 
 export const Emissions = () => {
   return (
-    <section className="relative flex h-[42rem] items-end py-20">
+    <section className="relative flex h-[34rem] items-end py-20 md:h-[42rem]">
       <div className="pointer-events-none relative z-10 container py-6">
-        <h2 className="text-6xl font-bold tracking-tighter italic">
+        <h2 className="text-4xl font-bold tracking-tighter italic md:text-6xl">
           Built for Performance.
           <br />
           Powered by Responsibility

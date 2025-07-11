@@ -10,7 +10,7 @@ export const Video = () => {
       className="container py-8 sm:py-12"
       aria-labelledby="innovation-heading"
     >
-      <article className="relative flex aspect-video flex-col items-start justify-between gap-4 overflow-hidden rounded-sm bg-gray-200 p-4 sm:p-9">
+      <article className="relative flex aspect-4/3 flex-col items-start justify-between gap-4 overflow-hidden rounded-sm bg-gray-200 p-4 sm:aspect-video sm:p-9">
         <button
           className="group hover:text-primary z-10 flex cursor-pointer items-center gap-2 self-end text-base font-semibold tracking-tight text-white italic transition-colors delay-75 sm:text-lg"
           aria-label="Play brand video"
@@ -20,16 +20,16 @@ export const Video = () => {
           </div>
           Play Video
         </button>
-        <div className="relative z-10 space-y-4">
+        <div className="relative z-10 space-y-2 md:space-y-4">
           <h2
             id="innovation-heading"
-            className="text-3xl font-bold tracking-tighter italic sm:text-5xl md:text-6xl"
+            className="text-xl font-bold tracking-tighter italic sm:text-5xl md:text-6xl"
           >
             Driven by Innovation.
             <br />
             Engineered for Impact.
           </h2>
-          <p className="max-w-prose text-base tracking-tight text-balance sm:text-lg">
+          <p className="max-w-prose text-xs tracking-tight text-balance max-md:leading-none sm:text-lg">
             Our advanced American-made anti-friction and lubrication solutions
             are trusted across industries for maximizing equipment life,
             lowering maintenance, and reducing emissions. At 100 Power, we don’t
@@ -40,12 +40,12 @@ export const Video = () => {
               href="/technology"
               aria-label="Learn more about our technology"
             >
-              Learn More <IconArrowUpRight />
+              Learn More <IconArrowUpRight className="size-3 sm:size-5" />
             </Link>
           </Button>
         </div>
         <div
-          className="from-background absolute inset-x-0 bottom-0 z-1 h-1/3 bg-gradient-to-t to-transparent md:h-2/3"
+          className="from-background absolute inset-x-0 bottom-0 z-1 h-2/3 bg-gradient-to-t to-transparent"
           aria-hidden="true"
         />
         <video

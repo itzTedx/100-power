@@ -13,7 +13,7 @@ import { Button } from "../ui/button";
 export function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="fixed top-3 left-1/2 z-9999 mx-auto flex w-full max-w-5xl -translate-x-1/2 items-center justify-between rounded-md bg-white p-2">
+    <header className="fixed top-3 left-1/2 z-9999 mx-auto flex w-[97%] max-w-5xl -translate-x-1/2 items-center justify-between rounded-md bg-white p-2 sm:w-full">
       <Link href="/" className="px-2" aria-label="Home">
         <Logo aria-label="100 Power Home" />
       </Link>
@@ -72,12 +72,6 @@ export function Navbar() {
       <Button asChild className="hidden md:inline-flex">
         <Link href="/contact" aria-label="Contact">
           Contact <ArrowUpRight />
-        </Link>
-      </Button>
-      {/* Mobile contact button */}
-      <Button asChild className="ml-2 md:hidden">
-        <Link href="/contact" aria-label="Contact">
-          <ArrowUpRight />
         </Link>
       </Button>
     </header>
