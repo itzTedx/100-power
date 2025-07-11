@@ -37,7 +37,7 @@ export const Faqs = () => {
         </Button>
 
         <h3 className="text-center text-3xl">Frequently Asked Questions</h3>
-        <div className="mt-6 grid w-full grid-cols-2 gap-6">
+        <div className="mt-6 grid w-full gap-6 md:grid-cols-2">
           {(() => {
             const half = Math.ceil(FAQS.length / 2);
             const firstHalf = FAQS.slice(0, half);

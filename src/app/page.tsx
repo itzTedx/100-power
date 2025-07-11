@@ -1,3 +1,4 @@
+import { Cta } from "@/components/sections/cta";
 import { Faqs } from "@/components/sections/faqs";
 import { Emissions } from "@/components/sections/home/emission";
 import { Header } from "@/components/sections/home/header";
@@ -23,6 +24,7 @@ export default function Home() {
         <Emissions />
         <Technologies />
         <Faqs />
+        <Cta />
       </main>
     </div>
   );
