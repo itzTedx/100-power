@@ -1,20 +1,12 @@
 import Image from "next/image";
 
-import { CheckCircle } from "lucide-react";
-
+import AboutUs from "@/components/sections/about/component";
 import { Cta } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import SimpleMarquee, { MarqueeItem } from "@/components/ui/marquee";
 import { Separator } from "@/components/ui/separator";
-import {
-  COUNTRIES,
-  GOALS,
-  INDUSTRIES,
-  MISSION,
-  RESPONSIBILITY,
-  VISION,
-} from "@/data/constants";
+import { COUNTRIES, INDUSTRIES, RESPONSIBILITY } from "@/data/constants";
 
 export default function AboutPage() {
   return (
@@ -94,40 +86,7 @@ export default function AboutPage() {
           ))}
         </SimpleMarquee>
       </section>
-
-      {/* Mission, Vision, Goals */}
-      <section className="container flex flex-col gap-8">
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold">Our Mission</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              {MISSION}
-            </CardContent>
-          </Card>
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold">Our Vision</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground">
-              {VISION}
-            </CardContent>
-          </Card>
-          <Card className="h-full">
-            <CardHeader>
-              <CardTitle className="text-xl font-bold">Our Goals</CardTitle>
-            </CardHeader>
-            <CardContent className="text-muted-foreground flex flex-col gap-2">
-              {GOALS.map((goal, i) => (
-                <div className="flex items-center gap-2" key={i}>
-                  <CheckCircle className="text-primary" size={18} /> {goal}
-                </div>
-              ))}
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+      <AboutUs />
 
       {/* Responsibility Section */}
       <section className="container flex flex-col gap-8">
