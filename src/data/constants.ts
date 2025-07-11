@@ -5,6 +5,9 @@ import {
   IconBrandTelegram,
   IconBrandX,
   IconBrandYoutube,
+  IconHeartHandshake,
+  IconLeaf,
+  IconShieldCheck,
 } from "@tabler/icons-react";
 
 export const NAV_LINKS = [
@@ -175,12 +178,12 @@ export const COUNTRIES = [
 
 export const INDUSTRIES = [
   { label: "Automotive", image: "/images/automotive.webp" },
-  { label: "Railways", image: "/images/automotive.webp" },
-  { label: "Mining", image: "/images/automotive.webp" },
-  { label: "Marine & Shipping", image: "/images/automotive.webp" },
-  { label: "Construction", image: "/images/automotive.webp" },
-  { label: "Agriculture", image: "/images/automotive.webp" },
-  { label: "Defense & Military", image: "/images/automotive.webp" },
+  { label: "Railways", image: "/images/railway.webp" },
+  { label: "Mining", image: "/images/mining.webp" },
+  { label: "Marine & Shipping", image: "/images/marine.webp" },
+  { label: "Construction", image: "/images/construction.webp" },
+  { label: "Agriculture", image: "/images/agriculture.webp" },
+  { label: "Defense & Military", image: "/images/military.webp" },
   { label: "Industrial Equipment", image: "/images/industrial.webp" },
 ];
 
@@ -201,17 +204,17 @@ export const GOALS = [
 
 export const RESPONSIBILITY = [
   {
-    icon: "ShieldCheck",
+    icon: IconShieldCheck,
     title: "Quality",
     desc: "We follow rigorous quality control to ensure every drop performs at the highest standard.",
   },
   {
-    icon: "Leaf",
+    icon: IconLeaf,
     title: "Sustainability",
     desc: "We engineer solutions that help reduce emissions, oil waste, and carbon impact.",
   },
   {
-    icon: "Handshake",
+    icon: IconHeartHandshake,
     title: "Integrity",
     desc: "We operate transparently and ethically, building lasting relationships with customers and partners.",
   },

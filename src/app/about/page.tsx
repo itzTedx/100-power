@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { CheckCircle, Handshake, Leaf, ShieldCheck } from "lucide-react";
+import { CheckCircle } from "lucide-react";
 
 import { Cta } from "@/components/sections/cta";
 import { Button } from "@/components/ui/button";
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="container flex flex-col gap-8">
+      <section className="container flex flex-col gap-8 overflow-hidden">
         <h2 className="text-center text-2xl font-bold italic sm:text-4xl">
           Industries We Serve
         </h2>
@@ -136,14 +136,7 @@ export default function AboutPage() {
         </h2>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
           {RESPONSIBILITY.map((item, i) => {
-            const Icon =
-              item.icon === "ShieldCheck"
-                ? ShieldCheck
-                : item.icon === "Leaf"
-                  ? Leaf
-                  : item.icon === "Handshake"
-                    ? Handshake
-                    : null;
+            const Icon = item.icon;
             return (
               <Card
                 className="flex h-full flex-col items-center text-center"
