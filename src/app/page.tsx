@@ -29,7 +29,7 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-4">
             {TECHNOLOGIES.map((item) => (
               <div
-                className="group relative aspect-[1.16/1] overflow-hidden rounded-sm"
+                className="group bg-secondary relative aspect-[1.16/1] overflow-hidden rounded-sm"
                 key={item.id}
               >
                 <div className="text-secondary-foreground relative z-10 flex h-full flex-col justify-between p-9">
@@ -47,6 +47,10 @@ export default function Home() {
 
                   <p>{item.description}</p>
                 </div>
+                <div
+                  className="from-secondary absolute inset-x-0 bottom-0 z-1 h-1/4 bg-gradient-to-t to-transparent"
+                  aria-hidden="true"
+                />
                 <Image
                   src={item.image}
                   alt=""
