@@ -29,34 +29,44 @@ export const NAV_LINKS = [
   {
     id: 4,
     title: "Products",
-    href: "/",
+    href: "/products",
   },
 ];
 
 export const PRODUCTS = [
   {
     id: 1,
-    title: "X-Power",
+    title: "X-Power Motor Oil",
+    label: "X-Power",
+    badge: "5W-30",
     href: "/",
   },
   {
     id: 2,
     title: "100 Power Booster",
+    label: "X-Power",
+    badge: "5W-30",
     href: "/",
   },
   {
     id: 3,
     title: "Fuel Conditioner",
+    label: "X-Power",
+    badge: "5W-30",
     href: "/",
   },
   {
     id: 4,
     title: "TG-10 Critical Maintenance Lubricant",
+    label: "X-Power",
+    badge: "5W-30",
     href: "/",
   },
   {
     id: 5,
     title: "EP-2 Lithium Complex Grease",
+    label: "X-Power",
+    badge: "5W-30",
     href: "/",
   },
 ];

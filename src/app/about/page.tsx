@@ -18,8 +18,8 @@ import {
 
 export default function AboutPage() {
   return (
-    <main className="flex flex-col gap-16 py-12 md:py-16">
-      <section className="container mt-20 flex h-96 flex-col items-center justify-center gap-6 text-center">
+    <main className="flex flex-col gap-28 py-12 md:py-16">
+      <section className="container mt-28 flex h-96 flex-col items-center justify-center gap-6 text-center">
         <h1 className="text-4xl font-bold tracking-tight italic sm:text-5xl md:text-7xl">
           Innovation. Precision. Performance.
         </h1>
@@ -52,11 +52,11 @@ export default function AboutPage() {
             trusted in the most demanding environments.
           </p>
         </div>
-        <div className="grid w-full grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-5">
+        <div className="grid w-full grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-7">
           {COUNTRIES.map((item, i) => (
-            <Card key={item.country} className="h-full">
-              <CardHeader className="pb-2">
-                <CardTitle className="text-lg font-bold italic">
+            <Card key={item.country} className="h-full text-center">
+              <CardHeader className="w-full">
+                <CardTitle className="w-full text-center text-lg font-bold italic">
                   {item.country}
                 </CardTitle>
               </CardHeader>
@@ -69,7 +69,7 @@ export default function AboutPage() {
       </section>
 
       {/* Industries We Serve */}
-      <section className="container flex flex-col gap-8 overflow-hidden">
+      <section className="container flex flex-col gap-8 overflow-hidden py-6">
         <h2 className="text-center text-2xl font-bold italic sm:text-4xl">
           Industries We Serve
         </h2>
